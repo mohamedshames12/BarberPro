@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المبيعات والفواتير | BarberPro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sales.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+<main class="sales-page">
+    <header class="sales-header">
+        <a href="/" class="back-link">العودة للوحة التحكم</a>
+        <div>
+            <h1>المبيعات والفواتير</h1>
+            <p>تسجيل المبيعات وإصدار الفواتير ومتابعة المدفوعات</p>
+        </div>
+    </header>
+
+    <section class="sales-stats">
+        <div class="sales-stat"><span>إجمالي العمليات</span><strong id="totalSales">0</strong></div>
+        <div class="sales-stat"><span>إجمالي المبيعات</span><strong id="totalRevenue">0.00 ج</strong></div>
+        <div class="sales-stat"><span>مبيعات اليوم</span><strong id="todayRevenue">0.00 ج</strong></div>
+    </section>
+
+    <section class="sales-panel">
+        <h2>تسجيل عملية بيع جديدة</h2>
+        <form id="saleForm">
+            <div class="sales-form-grid">
+                <label>اسم العميل
+                    <input id="saleCustomer" required maxlength="150" placeholder="اسم العميل">
+                </label>
+                <label>رقم الهاتف
+                    <input id="salePhone" type="tel" placeholder="رقم الهاتف">
+                </label>
+                <label>الموظف
+                    <select id="saleEmployee">
+                        <option value="">بدون تحديد موظف</option>
+                    </select>
+                </label>
+                <label>طريقة الدفع
+                    <select id="paymentMethod" required>
+                        <option value="cash">نقدي</option>
+                        <option value="card">بطاقة</option>
+                        <option value="wallet">محفظة إلكترونية</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="sale-items-header">
+                <h3>خدمات الفاتورة</h3>
+                <button type="button" id="addSaleItem">+ إضافة خدمة</button>
+            </div>
+            <div id="saleItems"></div>
+
+            <div class="sale-totals">
+                <label>الخصم بالجنيه
+                    <input id="saleDiscount" type="number" min="0" step="0.01" value="0">
+                </label>
+                <p>الإجمالي قبل الخصم: <strong id="saleSubtotal">0.00 ج</strong></p>
+                <p class="grand-total">الإجمالي النهائي: <strong id="saleTotal">0.00 ج</strong></p>
+            </div>
+
+            <label class="sale-notes">ملاحظات
+                <textarea id="saleNotes" rows="2" placeholder="ملاحظات اختيارية"></textarea>
+            </label>
+            <button type="submit" id="saveSale">إصدار الفاتورة وحفظ البيع</button>
+            <p id="saleMessage" role="status"></p>
+        </form>
+    </section>
+
+    <section class="sales-panel">
+        <div class="sales-list-header">
+            <h2>سجل المبيعات والفواتير</h2>
+            <input id="salesSearch" type="search" placeholder="ابحث برقم الفاتورة أو اسم العميل">
+        </div>
+        <div id="salesList">جاري تحميل المبيعات...</div>
+    </section>
+</main>
+<script src="../js/sales.js"></script>
+    <script src="/js/sales-appointments.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

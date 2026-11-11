@@ -1,0 +1,301 @@
+:root {
+    --emp-bg: #090b10;
+    --emp-card: #11151e;
+    --emp-border: rgba(212, 175, 90, .18);
+    --emp-gold: #d6b36a;
+    --emp-text: #f5f2eb;
+    --emp-muted: #9298a5;
+}
+
+body {
+    background: var(--emp-bg);
+    color: var(--emp-text);
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.employees-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 80% 0%, rgba(214,179,106,.09), transparent 35%),
+        var(--emp-bg);
+}
+
+.employees-header {
+    min-height: 76px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--emp-border);
+    background: rgba(9,11,16,.88);
+}
+
+.employees-brand {
+    color: var(--emp-text);
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.employees-brand span {
+    color: var(--emp-gold);
+}
+
+.employees-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.employees-header-actions a {
+    color: var(--emp-muted);
+    text-decoration: none;
+}
+
+.employees-header-actions button {
+    border: 1px solid var(--emp-border);
+    color: var(--emp-gold);
+    background: transparent;
+    padding: 10px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.employees-main {
+    width: min(1150px, 90%);
+    margin: 45px auto;
+}
+
+.employees-heading > span {
+    color: var(--emp-gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.employees-heading h1 {
+    font-size: clamp(27px, 5vw, 38px);
+    margin: 8px 0;
+}
+
+.employees-heading p,
+.employee-section-heading p {
+    color: var(--emp-muted);
+    margin-top: 5px;
+}
+
+.employees-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.employees-summary > div,
+.employee-form-card,
+.employee-list-card {
+    background: linear-gradient(145deg, #151a24, #10131b);
+    border: 1px solid var(--emp-border);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.employees-summary span {
+    display: block;
+    color: var(--emp-muted);
+    font-size: 14px;
+}
+
+.employees-summary strong {
+    display: block;
+    color: var(--emp-gold);
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.employee-form-card,
+.employee-list-card {
+    margin-bottom: 25px;
+}
+
+.employee-section-heading h2 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.employee-fields {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.employee-fields label {
+    color: var(--emp-muted);
+    font-size: 13px;
+}
+
+.employee-fields input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 9px;
+    padding: 13px;
+    border: 1px solid #303746;
+    border-radius: 9px;
+    background: #090d14;
+    color: var(--emp-text);
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.employee-fields input:focus {
+    border-color: var(--emp-gold);
+    box-shadow: 0 0 0 3px rgba(214,179,106,.08);
+}
+
+#addEmployeeButton {
+    margin-top: 22px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #e4c47e, #b78b3e);
+    color: #17130b;
+    border: 0;
+    border-radius: 9px;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#addEmployeeButton:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+#employeeFormMessage,
+#employeesMessage {
+    color: var(--emp-muted);
+    font-size: 13px;
+    margin-top: 14px;
+}
+
+.employees-table-wrap {
+    overflow-x: auto;
+    margin-top: 22px;
+}
+
+.employees-table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.employees-table-wrap th,
+.employees-table-wrap td {
+    padding: 16px 12px;
+    text-align: right;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.employees-table-wrap th {
+    color: var(--emp-gold);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.employees-table-wrap td {
+    color: var(--emp-text);
+    font-size: 13px;
+}
+
+.employee-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.employee-status.active {
+    color: #7de0a1;
+    background: rgba(50,190,110,.12);
+}
+
+.employee-status.disabled {
+    color: #ff9999;
+    background: rgba(220,70,70,.12);
+}
+
+@media (max-width: 750px) {
+    .employees-main {
+        width: 92%;
+        margin: 28px auto;
+    }
+
+    .employees-header {
+        padding: 0 4%;
+    }
+
+    .employees-header-actions {
+        gap: 10px;
+    }
+
+    .employees-header-actions a {
+        font-size: 12px;
+    }
+
+    .employees-summary {
+        gap: 10px;
+    }
+
+    .employees-summary > div {
+        padding: 17px;
+    }
+
+    .employee-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-form-card,
+    .employee-list-card {
+        padding: 18px;
+    }
+}
+
+/* BarberPro - Employees Light Theme */
+html[data-theme="light"] {
+    --emp-bg: #f4f6f9;
+    --emp-card: #ffffff;
+    --emp-border: #e1e5ec;
+    --emp-gold: #98702b;
+    --emp-text: #202633;
+    --emp-muted: #697386;
+}
+
+html[data-theme="light"] body {
+    background: var(--emp-bg);
+    color: var(--emp-text);
+}
+
+html[data-theme="light"] .employees-page {
+    background:
+        radial-gradient(ellipse at 80% 0%, rgba(181,139,60,.08), transparent 35%),
+        var(--emp-bg);
+}
+
+/* Employees Header - Light Theme */
+html[data-theme="light"] .employees-header {
+    background: linear-gradient(120deg, #ffffff, #f3f5f8, #f8f2e7);
+    border-bottom: 1px solid #e1e5ec;
+    box-shadow: 0 4px 18px rgba(30, 40, 55, .06);
+}
+
+html[data-theme="light"] .employees-brand {
+    color: #202633;
+}
+
+html[data-theme="light"] .employees-header a,
+html[data-theme="light"] .employees-header button {
+    color: #202633;
+}

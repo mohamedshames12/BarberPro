@@ -1,0 +1,509 @@
+/* BarberPro automatic day/night theme */
+html[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f4f6f9;
+    --surface: #ffffff;
+    --surface-light: #edf0f5;
+    --text: #202633;
+    --muted: #697386;
+    --gold: #b58b3c;
+    --gold-light: #98702b;
+    --border: #e1e5ec;
+}
+
+html[data-theme="light"] body {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+html[data-theme="light"] .sidebar,
+html[data-theme="light"] .sidebar-header,
+html[data-theme="light"] .topbar,
+html[data-theme="light"] .navbar,
+html[data-theme="light"] .stat-card,
+html[data-theme="light"] .content-card,
+html[data-theme="light"] .form-card,
+html[data-theme="light"] .table-card,
+html[data-theme="light"] .table-container,
+html[data-theme="light"] .table-wrapper,
+html[data-theme="light"] .employee-form-card,
+html[data-theme="light"] .employee-list-card,
+html[data-theme="light"] .report-card,
+html[data-theme="light"] .service-card,
+html[data-theme="light"] .customer-card,
+html[data-theme="light"] .booking-card,
+html[data-theme="light"] .sales-card,
+html[data-theme="light"] .auth-card,
+html[data-theme="light"] .login-card,
+html[data-theme="light"] .register-card,
+html[data-theme="light"] .auth-box,
+html[data-theme="light"] .modal-content {
+    background: #ffffff !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    box-shadow: 0 5px 22px rgba(25, 35, 55, .055);
+}
+
+html[data-theme="light"] .auth-background {
+    background: #f4f6f9 !important;
+}
+
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4,
+html[data-theme="light"] p,
+html[data-theme="light"] label,
+html[data-theme="light"] td,
+html[data-theme="light"] th,
+html[data-theme="light"] .profile-info,
+html[data-theme="light"] .stat-label,
+html[data-theme="light"] .card-title,
+html[data-theme="light"] .page-title,
+html[data-theme="light"] .section-title,
+html[data-theme="light"] .form-label,
+html[data-theme="light"] .employee-name,
+html[data-theme="light"] .customer-name {
+    color: var(--text);
+}
+
+html[data-theme="light"] small,
+html[data-theme="light"] .muted,
+html[data-theme="light"] .stat-bottom,
+html[data-theme="light"] .subtitle,
+html[data-theme="light"] .form-hint {
+    color: var(--muted);
+}
+
+html[data-theme="light"] input,
+html[data-theme="light"] select,
+html[data-theme="light"] textarea {
+    background: #ffffff !important;
+    color: #202633 !important;
+    border-color: #d9dee7 !important;
+}
+
+html[data-theme="light"] select option {
+    background: #ffffff !important;
+    color: #202633 !important;
+}
+
+html[data-theme="light"] table {
+    color: var(--text);
+}
+
+html[data-theme="light"] th {
+    background: #f0f2f6 !important;
+    color: #8b682b !important;
+}
+
+html[data-theme="light"] td {
+    border-color: #e8ebf0 !important;
+}
+
+html[data-theme="light"] tr:hover td {
+    background: #f7f8fa;
+}
+
+html[data-theme="light"] .sidebar a,
+html[data-theme="light"] .nav-link {
+    color: #4b5565;
+}
+
+html[data-theme="light"] .sidebar a:hover,
+html[data-theme="light"] .sidebar a.active,
+html[data-theme="light"] .nav-link.active {
+    background: rgba(181, 139, 60, .11);
+    color: #98702b;
+}
+
+html[data-theme="light"] .hero-content,
+html[data-theme="light"] .hero-content h2,
+html[data-theme="light"] .hero-content span {
+    color: var(--text);
+}
+
+html[data-theme="light"] .stat-number {
+    color: #98702b !important;
+}
+
+html[data-theme="light"] .report-card td {
+    color: var(--text) !important;
+}
+
+html[data-theme="light"] .booking-controls select option {
+    background: #ffffff !important;
+    color: #202633 !important;
+}
+
+/* Keep gold buttons and brand accents recognizable */
+html[data-theme="light"] button,
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .primary-button {
+    border-color: transparent;
+}
+
+/* Premium light theme - hero and dashboard statistics */
+html[data-theme="light"] .hero {
+    background:
+        radial-gradient(circle at 12% 50%, rgba(214,180,106,.16), transparent 32%),
+        linear-gradient(120deg, #ffffff 0%, #f8f5ed 100%) !important;
+    border: 1px solid rgba(181,139,60,.28) !important;
+    box-shadow: 0 16px 45px rgba(35,40,50,.09) !important;
+}
+
+html[data-theme="light"] .hero::before {
+    background-image:
+        linear-gradient(rgba(181,139,60,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(181,139,60,.055) 1px, transparent 1px);
+}
+
+html[data-theme="light"] .hero h2 {
+    color: #202633 !important;
+}
+
+html[data-theme="light"] .hero h2 span {
+    background: linear-gradient(90deg, #9a7029, #c39a4e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+
+html[data-theme="light"] .hero-content p {
+    color: #687181 !important;
+}
+
+html[data-theme="light"] .hero-tag {
+    color: #98702b !important;
+}
+
+html[data-theme="light"] .hero-emblem {
+    background: radial-gradient(circle, #fffdf8, #f0e6d0 85%) !important;
+    border-color: #c39a4e !important;
+    box-shadow: 0 8px 30px rgba(181,139,60,.17) !important;
+}
+
+html[data-theme="light"] .hero-emblem strong,
+html[data-theme="light"] .hero-emblem span {
+    color: #98702b !important;
+}
+
+html[data-theme="light"] .hero-emblem small {
+    color: #8a7046 !important;
+}
+
+html[data-theme="light"] .hero-ring {
+    border-color: rgba(181,139,60,.3) !important;
+}
+
+html[data-theme="light"] .floating-label {
+    background: #fffdf8 !important;
+    color: #98702b !important;
+    border-color: rgba(181,139,60,.3) !important;
+}
+
+html[data-theme="light"] .hero-glow {
+    background: rgba(214,180,106,.17) !important;
+}
+
+html[data-theme="light"] .stat-card {
+    background: linear-gradient(145deg, #ffffff, #faf9f5) !important;
+    border: 1px solid #e8e1d2 !important;
+    box-shadow: 0 10px 28px rgba(35,40,50,.07) !important;
+}
+
+html[data-theme="light"] .stat-top {
+    color: #596273 !important;
+}
+
+html[data-theme="light"] .stat-number {
+    color: #98702b !important;
+}
+
+html[data-theme="light"] .stat-number small {
+    color: #737b89 !important;
+}
+
+html[data-theme="light"] .stat-bottom {
+    color: #788191 !important;
+}
+
+html[data-theme="light"] .stat-card::after {
+    background: rgba(214,180,106,.12) !important;
+}
+
+html[data-theme="light"] .stat-card:hover {
+    border-color: rgba(181,139,60,.4) !important;
+    box-shadow: 0 15px 35px rgba(35,40,50,.1) !important;
+}
+
+/* Clean topbar typography in light mode */
+html[data-theme="light"] .topbar,
+html[data-theme="light"] .topbar * {
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .topbar {
+    box-shadow: 0 2px 10px rgba(25,35,55,.045) !important;
+}
+
+html[data-theme="light"] .profile-info strong {
+    color: #252b36 !important;
+    text-shadow: none !important;
+    font-weight: 800;
+}
+
+html[data-theme="light"] .profile-info small {
+    color: #788191 !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .topbar button,
+html[data-theme="light"] .topbar a {
+    text-shadow: none !important;
+}
+
+/* Rounded dashboard title background in light mode */
+html[data-theme="light"] .topbar h1,
+html[data-theme="light"] .topbar .page-title,
+html[data-theme="light"] .topbar .breadcrumb {
+    border-radius: 14px !important;
+    padding: 8px 14px !important;
+    overflow: hidden;
+}
+
+/* BarberPro - Light mode action cards */
+html[data-theme="light"] .action-card {
+    background: linear-gradient(145deg, #ffffff, #f7f8fb) !important;
+    border: 1px solid #e3e6ed !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 18px rgba(25, 35, 55, .07) !important;
+}
+
+html[data-theme="light"] .action-card:hover {
+    background: linear-gradient(145deg, #ffffff, #fffaf0) !important;
+    border-color: #c9a45e !important;
+    box-shadow: 0 10px 24px rgba(25, 35, 55, .11) !important;
+}
+
+html[data-theme="light"] .action-card strong {
+    color: #252b36 !important;
+}
+
+html[data-theme="light"] .action-card small {
+    color: #788191 !important;
+}
+
+html[data-theme="light"] .action-arrow {
+    color: #a18a60 !important;
+}
+
+/* Premium rounded topbar - Light mode only */
+html[data-theme="light"] .topbar {
+    background: linear-gradient(135deg, #ffffff 0%, #f7f8fb 65%, #fffaf0 100%) !important;
+    border: 1px solid #e7e2d6 !important;
+    border-radius: 20px !important;
+    padding: 18px 22px !important;
+    box-shadow: 0 7px 22px rgba(30, 38, 55, .07) !important;
+}
+
+/* =========================================
+   BARBERPRO - COMPLETE LIGHT THEME
+   All application pages
+========================================= */
+
+/* Shared page surfaces */
+html[data-theme="light"] .appointments-panel,
+html[data-theme="light"] .customers-panel,
+html[data-theme="light"] .employee-form-card,
+html[data-theme="light"] .employee-list-card,
+html[data-theme="light"] .employees-summary > div,
+html[data-theme="light"] .services-panel,
+html[data-theme="light"] .sales-panel,
+html[data-theme="light"] .filter-card,
+html[data-theme="light"] .report-card,
+html[data-theme="light"] .customer-form,
+html[data-theme="light"] .service-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fc) !important;
+    color: #252b36 !important;
+    border: 1px solid #e4e7ed !important;
+    border-radius: 17px !important;
+    box-shadow: 0 6px 20px rgba(25,35,55,.055) !important;
+}
+
+/* Page headings */
+html[data-theme="light"] .appointments-header h1,
+html[data-theme="light"] .customers-intro h2,
+html[data-theme="light"] .employees-heading h1,
+html[data-theme="light"] .services-header h1,
+html[data-theme="light"] .sales-header h1,
+html[data-theme="light"] .reports-header h1,
+html[data-theme="light"] .appointments-panel h2,
+html[data-theme="light"] .customers-list-heading h2,
+html[data-theme="light"] .employee-section-heading h2,
+html[data-theme="light"] .services-panel h2,
+html[data-theme="light"] .sales-panel h2,
+html[data-theme="light"] .report-card h2 {
+    color: #252b36 !important;
+}
+
+/* Descriptions and secondary text */
+html[data-theme="light"] .appointments-header p,
+html[data-theme="light"] .customers-intro p,
+html[data-theme="light"] .employees-heading p,
+html[data-theme="light"] .employee-section-heading p,
+html[data-theme="light"] .services-header p,
+html[data-theme="light"] .sales-header p,
+html[data-theme="light"] .reports-header p,
+html[data-theme="light"] .sale-item label,
+html[data-theme="light"] .sale-totals p {
+    color: #737e8e !important;
+}
+
+/* Forms */
+html[data-theme="light"] .appointments-page input,
+html[data-theme="light"] .appointments-page select,
+html[data-theme="light"] .appointments-page textarea,
+html[data-theme="light"] .customers-page input,
+html[data-theme="light"] .customers-page textarea,
+html[data-theme="light"] .employees-page input,
+html[data-theme="light"] .services-page input,
+html[data-theme="light"] .services-page textarea,
+html[data-theme="light"] .sales-page input,
+html[data-theme="light"] .sales-page select,
+html[data-theme="light"] .sales-page textarea,
+html[data-theme="light"] .reports-page input,
+html[data-theme="light"] .filter-card input {
+    background: #ffffff !important;
+    color: #252b36 !important;
+    border: 1px solid #dce1e9 !important;
+    border-radius: 10px !important;
+}
+
+html[data-theme="light"] input::placeholder,
+html[data-theme="light"] textarea::placeholder {
+    color: #9aa3b1 !important;
+}
+
+/* Labels */
+html[data-theme="light"] .appointments-page label,
+html[data-theme="light"] .customers-page label,
+html[data-theme="light"] .employees-page label,
+html[data-theme="light"] .services-page label,
+html[data-theme="light"] .sales-page label,
+html[data-theme="light"] .filter-card label {
+    color: #424c5b !important;
+}
+
+/* Tables */
+html[data-theme="light"] .customers-table,
+html[data-theme="light"] .employees-table-wrap table,
+html[data-theme="light"] .report-card table {
+    background: #ffffff !important;
+    color: #303947 !important;
+}
+
+html[data-theme="light"] .customers-table th,
+html[data-theme="light"] .employees-table-wrap th,
+html[data-theme="light"] .report-card th {
+    background: #f2f4f8 !important;
+    color: #98702b !important;
+    border-bottom: 1px solid #e1e5ec !important;
+}
+
+html[data-theme="light"] .customers-table td,
+html[data-theme="light"] .employees-table-wrap td,
+html[data-theme="light"] .report-card td {
+    color: #424c5b !important;
+    border-bottom: 1px solid #edf0f4 !important;
+}
+
+/* Statistics */
+html[data-theme="light"] .appointments-stats article,
+html[data-theme="light"] .sales-stat,
+html[data-theme="light"] .service-stat {
+    background: linear-gradient(145deg, #ffffff, #f7f8fb) !important;
+    border: 1px solid #e4e7ed !important;
+    border-radius: 15px !important;
+    box-shadow: 0 5px 16px rgba(25,35,55,.05) !important;
+}
+
+html[data-theme="light"] .appointments-stats article span,
+html[data-theme="light"] .sales-stat span,
+html[data-theme="light"] .service-stat span,
+html[data-theme="light"] .stat-card span {
+    color: #737e8e !important;
+}
+
+/* Booking and list rows */
+html[data-theme="light"] .booking-row,
+html[data-theme="light"] .sale-row,
+html[data-theme="light"] .booking-filters {
+    background: #ffffff !important;
+    color: #303947 !important;
+    border-color: #e3e7ed !important;
+}
+
+/* Services and prices */
+html[data-theme="light"] .service-card h3,
+html[data-theme="light"] .service-price,
+html[data-theme="light"] .sales-stat strong,
+html[data-theme="light"] .service-stat strong,
+html[data-theme="light"] .sale-totals strong,
+html[data-theme="light"] .sale-row strong,
+html[data-theme="light"] .stat-card strong {
+    color: #98702b !important;
+}
+
+/* Buttons */
+html[data-theme="light"] .appointments-page button,
+html[data-theme="light"] .customers-page button,
+html[data-theme="light"] .employees-page button,
+html[data-theme="light"] .services-page button,
+html[data-theme="light"] .sales-page button,
+html[data-theme="light"] .reports-page button {
+    border-radius: 11px;
+}
+
+/* Login and registration */
+html[data-theme="light"] .auth-background {
+    background: linear-gradient(135deg, #f4f6fa, #ffffff, #f8f3e9) !important;
+}
+
+html[data-theme="light"] .auth-panel,
+html[data-theme="light"] .auth-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fc) !important;
+    color: #252b36 !important;
+    border: 1px solid #e4e7ed !important;
+    border-radius: 22px !important;
+    box-shadow: 0 12px 35px rgba(25,35,55,.09) !important;
+}
+
+html[data-theme="light"] .auth-heading h2,
+html[data-theme="light"] .brand strong {
+    color: #252b36 !important;
+}
+
+html[data-theme="light"] .auth-heading p,
+html[data-theme="light"] .brand small,
+html[data-theme="light"] .brand-content p {
+    color: #737e8e !important;
+}
+
+html[data-theme="light"] .auth-card input {
+    background: #ffffff !important;
+    color: #252b36 !important;
+    border: 1px solid #dce1e9 !important;
+}
+
+/* Back links */
+html[data-theme="light"] .back-link {
+    color: #98702b !important;
+}
+
+/* Responsive safety */
+html[data-theme="light"] .table-wrapper,
+html[data-theme="light"] .employees-table-wrap,
+html[data-theme="light"] .table-wrap {
+    background: transparent !important;
+}

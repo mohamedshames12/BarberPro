@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090b10">
+    <title>إنشاء حساب | BarberPro</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+
+<div class="auth-background"></div>
+
+<main class="auth-layout">
+
+    <section class="auth-brand">
+        <a href="../index.html" class="brand">
+            <div class="brand-mark">B<span>.</span></div>
+            <div>
+                <strong>Barber<span>Pro</span></strong>
+                <small>PREMIUM SALON MANAGEMENT</small>
+            </div>
+        </a>
+
+        <div class="brand-content">
+            <span class="eyebrow">START YOUR JOURNEY</span>
+            <h1>خطوتك الأولى<br><span>نحو التميز.</span></h1>
+            <p>أنشئ حساب صالونك وابدأ في إدارة المواعيد والعملاء والخدمات والمبيعات من مكان واحد.</p>
+        </div>
+
+        <div class="brand-bottom">BARBERPRO © 2026</div>
+        <div class="brand-decoration">B</div>
+    </section>
+
+    <section class="auth-panel">
+        <div class="auth-card">
+
+            <div class="mobile-brand">
+                <div class="brand-mark">B<span>.</span></div>
+                <strong>Barber<span>Pro</span></strong>
+            </div>
+
+            <div class="auth-heading">
+                <span class="eyebrow">CREATE YOUR ACCOUNT</span>
+                <h2>أنشئ حساب صالونك ✨</h2>
+                <p>املأ البيانات التالية لبدء استخدام BarberPro.</p>
+            </div>
+
+            <form id="registerForm">
+
+                <div class="form-group">
+                    <label for="tenantName">اسم الصالون</label>
+                    <input type="text" id="tenantName" name="tenantName"
+                        placeholder="مثال: صالون الأناقة" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tenantPhone">رقم هاتف الصالون</label>
+                    <input type="tel" id="tenantPhone" name="tenantPhone"
+                        placeholder="رقم الهاتف">
+                </div>
+
+                <div class="form-group">
+                    <label for="tenantEmail">بريد الصالون الإلكتروني</label>
+                    <input type="email" id="tenantEmail" name="tenantEmail"
+                        placeholder="salon@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="tenantAddress">عنوان الصالون</label>
+                    <input type="text" id="tenantAddress" name="tenantAddress"
+                        placeholder="المدينة والمنطقة">
+                </div>
+
+                <div class="form-group">
+                    <label for="ownerName">اسم صاحب الصالون</label>
+                    <input type="text" id="ownerName" name="ownerName"
+                        placeholder="الاسم بالكامل" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ownerEmail">البريد الإلكتروني لصاحب الصالون</label>
+                    <input type="email" id="ownerEmail" name="ownerEmail"
+                        placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" name="password"
+                        placeholder="8 أحرف على الأقل" minlength="8"
+                        maxlength="72" autocomplete="new-password" required>
+                </div>
+
+                <div id="registerMessage" class="form-message" role="alert"></div>
+
+                <button type="submit" class="submit-button" id="registerButton">
+                    <span>إنشاء حساب الصالون</span>
+                    <span class="button-arrow">←</span>
+                </button>
+
+            </form>
+
+            <div class="auth-divider">
+                <span>لديك حساب بالفعل؟</span>
+            </div>
+
+            <a href="login.html" class="register-link">تسجيل الدخول</a>
+
+            <p class="security-note">✦ بياناتك محمية ونظامك جاهز لخدمتك</p>
+
+        </div>
+    </section>
+
+</main>
+
+    <script src="../js/register.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

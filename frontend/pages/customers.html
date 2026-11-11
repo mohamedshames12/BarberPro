@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090b10">
+    <meta name="description" content="إدارة عملاء الصالون - BarberPro">
+    <title>BarberPro | إدارة العملاء</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/customers.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+
+<div class="app-shell">
+
+    <aside class="sidebar">
+        <a href="../index.html" class="brand">
+            <div class="brand-mark">B<span>.</span></div>
+            <div class="brand-name">
+                <strong>Barber<span>Pro</span></strong>
+                <small>PREMIUM MANAGEMENT</small>
+            </div>
+        </a>
+
+        <div class="sidebar-label">القائمة الرئيسية</div>
+
+        <nav class="navigation">
+            <a href="../index.html" class="nav-link">
+                <span class="nav-icon">⌂</span>
+                <span>الرئيسية</span>
+            </a>
+            <a href="/pages/appointments.html" class="nav-link">
+                <span class="nav-icon">▦</span>
+                <span>المواعيد والحجوزات</span>
+            </a>
+            <a href="customers.html" class="nav-link active" aria-current="page">
+                <span class="nav-icon">♙</span>
+                <span>العملاء</span>
+                <span class="active-indicator"></span>
+            </a>
+            <a href="/pages/services.html" class="nav-link">
+                <span class="nav-icon">✂</span>
+                <span>الخدمات والأسعار</span>
+            </a>
+            <a href="/pages/employees.html" class="nav-link"><span class="nav-icon">♟</span>
+                <span>فريق العمل</span></a>
+            <a href="/pages/sales.html" class="nav-link">
+                <span class="nav-icon">▤</span>
+                <span>المبيعات والفواتير</span>
+            </a>
+            <a href="/pages/reports.html" class="nav-link">
+                <span class="nav-icon">▥</span>
+                <span>التقارير والتحليلات</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="premium-card">
+                <div class="premium-icon">✦</div>
+                <strong>ارتقِ بصالونك</strong>
+                <p>اكتشف تجربة إدارة أكثر احترافية.</p>
+                <a href="#">اكتشف المميزات ←</a>
+            </div>
+
+            <div class="sidebar-footer">
+                <span class="online-dot"></span>
+                نظامك جاهز للعمل
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="page-heading">
+                <span class="eyebrow">BARBERPRO / CUSTOMERS</span>
+                <h1>إدارة العملاء</h1>
+            </div>
+
+            <div class="topbar-actions">
+                <div class="date-chip">◷ <span id="currentDate">اليوم</span></div>
+                <div class="profile">
+                    <div class="profile-avatar">B</div>
+                    <div class="profile-info">
+                        <strong>إدارة الصالون</strong>
+                        <small>مرحباً بك</small>
+                    </div>
+                    <span class="profile-arrow">⌄</span>
+                    <button type="button" class="logout-button" id="logoutButton">
+                        تسجيل الخروج
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="customers-intro">
+            <span class="eyebrow">CUSTOMER MANAGEMENT</span>
+            <h2>عملاؤك هم أساس نجاحك.</h2>
+            <p>احتفظ ببيانات عملائك ونظّم ملفاتهم بسهولة واحترافية.</p>
+        </section>
+
+        <section class="customers-overview">
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>إجمالي العملاء</span>
+                    <div class="stat-icon purple-icon">♙</div>
+                </div>
+                <strong class="stat-number" id="totalCustomers">—</strong>
+                <div class="stat-bottom">
+                    <span class="neutral-text">العملاء المسجلون</span>
+                    <span>01</span>
+                </div>
+                <div class="stat-line"><i></i></div>
+            </article>
+        </section>
+
+        <section class="customers-panel" id="addCustomerSection">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">NEW CUSTOMER</span>
+                    <h2>إضافة عميل جديد</h2>
+                    <p>أدخل بيانات العميل لحفظ ملفه في النظام.</p>
+                </div>
+            </div>
+
+            <form id="customerForm" class="customer-form">
+                <div class="form-group">
+                    <label for="fullName">اسم العميل *</label>
+                    <input type="text" id="fullName" name="fullName"
+                           maxlength="150" placeholder="اكتب اسم العميل" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone"
+                           maxlength="30" placeholder="01xxxxxxxxx">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email"
+                           maxlength="255" placeholder="example@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthDate">تاريخ الميلاد</label>
+                    <input type="date" id="birthDate" name="birthDate">
+                </div>
+
+                <div class="form-group form-group-full">
+                    <label for="notes">ملاحظات</label>
+                    <textarea id="notes" name="notes" rows="3"
+                              placeholder="ملاحظات إضافية عن العميل..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="hero-button" id="saveCustomerButton">
+                        حفظ العميل <span>←</span>
+                    </button>
+                    <p id="customerFormMessage" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="customers-panel">
+            <div class="customers-list-heading">
+                <div>
+                    <span class="eyebrow">CUSTOMER DIRECTORY</span>
+                    <h2>قائمة العملاء</h2>
+                    <p>جميع العملاء المسجلين لدى صالونك.</p>
+                </div>
+
+                <div class="customer-search">
+                    <input type="search" id="customerSearch"
+                           placeholder="ابحث بالاسم أو الهاتف..."
+                           aria-label="البحث عن عميل">
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="customers-table">
+                    <thead>
+                        <tr>
+                            <th>العميل</th>
+                            <th>رقم الهاتف</th>
+                            <th>البريد الإلكتروني</th>
+                            <th>تاريخ التسجيل</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customersTableBody">
+                        <tr>
+                            <td colspan="5">جاري تحميل العملاء...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="customersListMessage" role="status" aria-live="polite"></p>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-brand">Barber<span>Pro</span></div>
+            <p>صُمّم ليرتقي بأعمالك. <span>✦</span></p>
+            <small>© 2026 BarberPro. جميع الحقوق محفوظة.</small>
+        </footer>
+
+    </main>
+</div>
+
+<script>
+    const dateElement = document.getElementById('currentDate');
+    dateElement.textContent = new Intl.DateTimeFormat('ar-EG', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long'
+    }).format(new Date());
+</script>
+
+<script src="../js/customers.js"></script>
+
+<script>
+(async function () {
+    const token = sessionStorage.getItem('barberpro_token');
+    if (!token) return;
+
+    try {
+        const response = await fetch('/api/auth/me', {
+            headers: { Authorization: `Bearer ${token}` }
+        });
+        if (!response.ok) return;
+
+        const result = await response.json();
+        if (result.user && result.user.role === 'employee') {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.textContent.includes('فريق العمل')) {
+                    link.style.display = 'none';
+                }
+            });
+        }
+    } catch (error) {
+        console.error('تعذر التحقق من الصلاحيات:', error);
+    }
+})();
+</script>
+
+    <script src="../js/theme.js"></script>
+</body>
+</html>

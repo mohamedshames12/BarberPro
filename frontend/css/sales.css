@@ -1,0 +1,218 @@
+.sales-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+    color: #f5f5f5;
+}
+.sales-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+.sales-header h1, .sales-panel h2, .sale-items-header h3 {
+    color: #d9b65d;
+}
+.sales-header p { color: #aaa; }
+.back-link { color: #d9b65d; text-decoration: none; }
+.sales-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.sales-stat, .sales-panel {
+    background: #171717;
+    border: 1px solid #383020;
+    border-radius: 15px;
+    padding: 22px;
+}
+.sales-stat { display: flex; flex-direction: column; gap: 12px; }
+.sales-stat span { color: #aaa; }
+.sales-stat strong { color: #d9b65d; font-size: 25px; }
+.sales-panel { margin-bottom: 24px; }
+.sales-panel h2 { margin-top: 0; }
+.sales-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+.sales-form-grid label, .sale-totals label, .sale-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #ddd;
+}
+.sales-page input, .sales-page select, .sales-page textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #514329;
+    border-radius: 9px;
+    background: #101010;
+    color: white;
+    font: inherit;
+}
+.sales-page button {
+    padding: 11px 17px;
+    border: 1px solid #d9b65d;
+    border-radius: 9px;
+    background: #d9b65d;
+    color: #171717;
+    font-weight: bold;
+    cursor: pointer;
+}
+.sale-items-header, .sales-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0 14px;
+}
+.sale-items-header h3 { margin: 0; }
+.sale-item {
+    display: grid;
+    grid-template-columns: minmax(180px, 2fr) 100px 120px 90px;
+    gap: 10px;
+    align-items: end;
+    padding: 14px;
+    margin-bottom: 10px;
+    background: #101010;
+    border: 1px solid #383020;
+    border-radius: 10px;
+}
+.sale-item label { display: flex; flex-direction: column; gap: 7px; color: #bbb; }
+.sale-item .line-total { color: #d9b65d; padding-bottom: 12px; }
+.sale-item .remove-item { background: #542323; color: white; border-color: #854040; }
+.sale-totals {
+    max-width: 420px;
+    margin: 20px 0;
+    padding: 16px;
+    border: 1px solid #514329;
+    border-radius: 10px;
+}
+.sale-totals p { color: #ccc; }
+.sale-totals strong { color: #d9b65d; }
+.sale-totals .grand-total { font-size: 20px; }
+.sale-notes { margin-bottom: 18px; }
+#saveSale { width: 100%; }
+#saleMessage { color: #d9b65d; }
+.sale-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 4px;
+    border-bottom: 1px solid #383020;
+}
+.sale-row strong { color: #d9b65d; }
+.sale-row small { display: block; color: #aaa; margin-top: 6px; }
+.sale-row button { margin: 4px; }
+.invoice-print { background: #292929 !important; color: white !important; }
+@media (max-width: 700px) {
+    .sales-page { padding: 14px; }
+    .sales-header { align-items: flex-start; flex-direction: column; }
+    .sales-stats { grid-template-columns: 1fr; }
+    .sales-form-grid { grid-template-columns: 1fr; }
+    .sale-item { grid-template-columns: 1fr 1fr; }
+    .sale-item label:first-child { grid-column: 1 / -1; }
+    .sales-list-header { align-items: stretch; flex-direction: column; }
+    .sale-row { align-items: flex-start; flex-direction: column; }
+}
+@media print {
+    body * { visibility: hidden; }
+    #printInvoice, #printInvoice * { visibility: visible; }
+    #printInvoice {
+        position: absolute;
+        inset: 0;
+        padding: 25px;
+        background: white;
+        color: black;
+        direction: rtl;
+    }
+}
+
+/* BarberPro Sales - Light Theme */
+html[data-theme="light"] .sales-page {
+    color: #202633;
+}
+
+html[data-theme="light"] .sales-header h1,
+html[data-theme="light"] .sales-panel h2,
+html[data-theme="light"] .sale-items-header h3 {
+    color: #98702b;
+}
+
+html[data-theme="light"] .sales-header p,
+html[data-theme="light"] .sales-stat span,
+html[data-theme="light"] .sales-form-grid label,
+html[data-theme="light"] .sale-totals label,
+html[data-theme="light"] .sale-notes,
+html[data-theme="light"] .sale-item label {
+    color: #596273;
+}
+
+html[data-theme="light"] .back-link {
+    color: #98702b;
+}
+
+html[data-theme="light"] .sales-stat,
+html[data-theme="light"] .sales-panel {
+    background: #ffffff;
+    border-color: #e1e5ec;
+    box-shadow: 0 4px 16px rgba(30, 40, 55, .05);
+}
+
+html[data-theme="light"] .sales-stat strong,
+html[data-theme="light"] .sale-totals strong,
+html[data-theme="light"] .sale-item .line-total {
+    color: #98702b;
+}
+
+html[data-theme="light"] .sales-page input,
+html[data-theme="light"] .sales-page select,
+html[data-theme="light"] .sales-page textarea {
+    background: #ffffff;
+    color: #202633;
+    border-color: #d5dbe5;
+}
+
+html[data-theme="light"] .sale-item {
+    background: #f7f8fa;
+    border-color: #e1e5ec;
+}
+
+html[data-theme="light"] .sale-totals {
+    border-color: #e1e5ec;
+    background: #f7f8fa;
+}
+
+html[data-theme="light"] .sale-totals p {
+    color: #596273;
+}
+
+html[data-theme="light"] #saleMessage {
+    color: #98702b;
+}
+
+/* Completed Appointment Invoice - Light Theme */
+html[data-theme="light"] .sale-row {
+    background: #ffffff;
+    color: #202633;
+    border-bottom-color: #e1e5ec;
+}
+
+html[data-theme="light"] .sale-row strong {
+    color: #98702b;
+}
+
+html[data-theme="light"] .sale-row small {
+    color: #697386;
+}
+
+html[data-theme="light"] .invoice-print {
+    background: #ffffff !important;
+    color: #202633 !important;
+    border: 1px solid #e1e5ec;
+}

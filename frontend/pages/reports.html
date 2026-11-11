@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التقارير والتحليلات | BarberPro</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/reports.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <main class="reports-page">
+    <header class="reports-header">
+      <div>
+        <a href="/index.html" class="back-link">← العودة للوحة التحكم</a>
+        <h1>التقارير والتحليلات</h1>
+        <p>تابع أداء الصالون والمبيعات والخدمات والموظفين</p>
+      </div>
+      <button id="refreshReports" class="gold-button">تحديث التقارير</button>
+    </header>
+
+    <section class="filter-card">
+      <div>
+        <label for="reportFrom">من تاريخ</label>
+        <input type="date" id="reportFrom">
+      </div>
+      <div>
+        <label for="reportTo">إلى تاريخ</label>
+        <input type="date" id="reportTo">
+      </div>
+      <button id="applyFilter" class="gold-button">عرض التقرير</button>
+    </section>
+
+    <div id="reportMessage" class="report-message" role="status"></div>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>إجمالي المبيعات</span>
+        <strong id="totalSales">0.00 ج</strong>
+      </article>
+      <article class="stat-card">
+        <span>عدد الفواتير</span>
+        <strong id="invoiceCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>متوسط الفاتورة</span>
+        <strong id="averageInvoice">0.00 ج</strong>
+      </article>
+      <article class="stat-card">
+        <span>مبيعات اليوم</span>
+        <strong id="todaySales">0.00 ج</strong>
+      </article>
+      <article class="stat-card">
+        <span>فواتير اليوم</span>
+        <strong id="todayInvoices">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>مبيعات الشهر</span>
+        <strong id="monthSales">0.00 ج</strong>
+      </article>
+    </section>
+
+    <section class="report-card">
+      <h2>حركة المبيعات اليومية</h2>
+      <div class="chart-container">
+        <canvas id="salesChart"></canvas>
+        <p id="chartEmpty" hidden>لا توجد مبيعات في الفترة المحددة</p>
+      </div>
+    </section>
+
+    <section class="report-columns">
+      <article class="report-card">
+        <h2>أكثر الخدمات بيعًا</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>الخدمة</th><th>الكمية</th><th>الإيراد</th></tr>
+            </thead>
+            <tbody id="servicesTable">
+              <tr><td colspan="3">جاري التحميل...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="report-card" id="employeeReport">
+        <h2>أداء الموظفين</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>الموظف</th><th>الفواتير</th><th>المبيعات</th></tr>
+            </thead>
+            <tbody id="employeesTable">
+              <tr><td colspan="3">جاري التحميل...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/js/reports.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات والأسعار | BarberPro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+    <main class="services-page">
+        <header class="services-header">
+            <a href="/" class="back-link">العودة للوحة التحكم</a>
+            <div>
+                <h1>الخدمات والأسعار</h1>
+                <p>إدارة خدمات الصالون وأسعارها ومدد تنفيذها</p>
+            </div>
+        </header>
+
+        <section class="services-stats">
+            <div class="service-stat">
+                <span>إجمالي الخدمات</span>
+                <strong id="totalServices">0</strong>
+            </div>
+            <div class="service-stat">
+                <span>الخدمات النشطة</span>
+                <strong id="activeServices">0</strong>
+            </div>
+            <div class="service-stat">
+                <span>الخدمات المتوقفة</span>
+                <strong id="inactiveServices">0</strong>
+            </div>
+        </section>
+
+        <section class="services-panel" id="serviceFormPanel">
+            <h2 id="formTitle">إضافة خدمة جديدة</h2>
+
+            <form id="serviceForm">
+                <input type="hidden" id="serviceId">
+
+                <div class="service-form-grid">
+                    <label>
+                        اسم الخدمة
+                        <input id="serviceName" type="text" required maxlength="150"
+                               placeholder="مثال: قص شعر">
+                    </label>
+
+                    <label>
+                        السعر بالجنيه
+                        <input id="servicePrice" type="number" min="0" step="0.01"
+                               required placeholder="مثال: 100">
+                    </label>
+
+                    <label>
+                        مدة الخدمة بالدقائق
+                        <input id="serviceDuration" type="number" min="1" step="1"
+                               value="30" required>
+                    </label>
+
+                    <label class="service-description">
+                        وصف الخدمة
+                        <textarea id="serviceDescription" rows="3"
+                                  placeholder="تفاصيل الخدمة (اختياري)"></textarea>
+                    </label>
+                </div>
+
+                <div class="service-form-actions">
+                    <button type="submit" id="saveService">حفظ الخدمة</button>
+                    <button type="button" id="cancelEdit" hidden>إلغاء التعديل</button>
+                </div>
+
+                <p id="serviceMessage" role="status"></p>
+            </form>
+        </section>
+
+        <section class="services-panel">
+            <div class="services-list-header">
+                <h2>قائمة الخدمات</h2>
+                <input id="serviceSearch" type="search" placeholder="ابحث عن خدمة...">
+            </div>
+            <div id="servicesList" class="services-list">
+                جاري تحميل الخدمات...
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/services.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

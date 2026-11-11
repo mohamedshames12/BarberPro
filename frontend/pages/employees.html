@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090b10">
+    <title>إدارة الموظفين | BarberPro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/employees.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+    <div class="employees-page">
+        <header class="employees-header">
+            <a href="/" class="employees-brand">Barber<span>Pro</span></a>
+            <div class="employees-header-actions">
+                <a href="/">لوحة التحكم</a>
+                <button id="logoutButton" type="button">تسجيل الخروج</button>
+            </div>
+        </header>
+
+        <main class="employees-main">
+            <div class="employees-heading">
+                <span>BARBERPRO / TEAM MANAGEMENT</span>
+                <h1>إدارة الموظفين</h1>
+                <p>أضف فريق عملك وتابع حسابات الموظفين داخل الصالون.</p>
+            </div>
+
+            <section class="employees-summary">
+                <div>
+                    <span>إجمالي الموظفين</span>
+                    <strong id="employeesCount">—</strong>
+                </div>
+                <div>
+                    <span>الموظفون النشطون</span>
+                    <strong id="activeEmployeesCount">—</strong>
+                </div>
+            </section>
+
+            <section class="employee-form-card">
+                <div class="employee-section-heading">
+                    <h2>إضافة موظف جديد</h2>
+                    <p>أدخل بيانات الموظف لإنشاء حساب خاص به.</p>
+                </div>
+
+                <form id="employeeForm">
+                    <div class="employee-fields">
+                        <label>
+                            الاسم بالكامل
+                            <input
+                                type="text"
+                                id="employeeName"
+                                name="fullName"
+                                minlength="2"
+                                maxlength="150"
+                                placeholder="اسم الموظف"
+                                required
+                            >
+                        </label>
+
+                        <label>
+                            البريد الإلكتروني
+                            <input
+                                type="email"
+                                id="employeeEmail"
+                                name="email"
+                                maxlength="255"
+                                placeholder="employee@example.com"
+                                required
+                            >
+                        </label>
+
+                        <label class="employee-password-field">
+                            كلمة المرور
+                            <input
+                                type="password"
+                                id="employeePassword"
+                                name="password"
+                                minlength="8"
+                                maxlength="72"
+                                placeholder="8 أحرف على الأقل"
+                                required
+                            >
+                        </label>
+                    </div>
+
+                    <button type="submit" id="addEmployeeButton">
+                        إضافة الموظف
+                    </button>
+
+                    <p id="employeeFormMessage" role="status"></p>
+                </form>
+            </section>
+
+            <section class="employee-list-card">
+                <div class="employee-section-heading">
+                    <h2>فريق العمل</h2>
+                    <p>قائمة حسابات الموظفين المسجلة في صالونك.</p>
+                </div>
+
+                <div id="employeesMessage" role="status">جارٍ تحميل الموظفين...</div>
+
+                <div class="employees-table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الموظف</th>
+                                <th>البريد الإلكتروني</th>
+                                <th>الحالة</th>
+                                <th>تاريخ الإضافة</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employeesTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/employees.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>
